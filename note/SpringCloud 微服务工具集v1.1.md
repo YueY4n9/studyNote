@@ -780,7 +780,7 @@ String forObject = restTemplate.getForObject("http://服务ID/hello/hello?name="
 
 ```markdown
 # 1.ribbon负载均衡算法
-- RoundRobinRule         		轮训策略	按顺序循环选择 Server
+- RoundRobinRule         		轮询策略	按顺序循环选择 Server
 - RandomRule             		随机策略	随机选择 Server
 - AvailabilityFilteringRule 可用过滤策略
  	`会先过滤由于多次访问故障而处于断路器跳闸状态的服务，还有并发的连接数量超过阈值的服务，然后对剩余的服务列表按照轮询策略进行访问
@@ -2481,7 +2481,7 @@ public class UrlFilter  implements Filter {
 ## 13. SpringCloud  微服务工具集总结
 
 ```markdown
-# 服务间通信方式: RPC  、 Http 协议 (SpringCloud中)
+# 服务间通信方式: 		RPC  、 Http 协议 (SpringCloud中)
 
 # 1.服务注册中心组件:  Eureka  、 Consul
 
@@ -2489,14 +2489,14 @@ public class UrlFilter  implements Filter {
 	 a.RestTemplate(HttpClient对象) + Ribbon组件(springcloud)
 	 b.openfegin(伪httpclient客户端组件 底层默认集成Ribbon)  推荐
 
-# 3.微服务保护组件: Hystrix (防止服务雪崩现象)  Hystrix DashBoard 组件  维护状态
+# 3.微服务保护组件: 	Hystrix (防止服务雪崩现象)  Hystrix DashBoard 组件  维护状态
 
-# 4.微服务网关组件: Zuul1.x  Zuul2.x(netflix组件)、Gateway(Spring 组件)
+# 4.微服务网关组件: 	Zuul1.x  Zuul2.x(netflix组件)、Gateway(Spring 组件)
 	网关： 路由转发  +  过滤器（前置predicate   后置filter）
 
 # 5.统一配置中心组件:  Config (netflix)
 	作用: 用来将微服务中所有配置进行远程git仓库统一管理
 
-# 6.消息总线:         Bus 
+# 6.消息总线:         Bus
 	作用: 用来通过消息中间件将所有微服务连接到一起,利用广播模型实现配置自动刷新机制
 ```
