@@ -593,7 +593,7 @@ spring.cloud.consul.discovery.service-name=${spring.application.name} 					#指�
 
 ----
 
-## 7. 服务间通信方式
+## 7. 服务间通信方式 Ribbon
 
 接下来在整个微服务架构中,我们比较关心的就是服务间的服务改如何调用,有哪些调用方式?
 
